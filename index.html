@@ -14,6 +14,8 @@
         html {
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -21,9 +23,12 @@
             font-family: 'Georgia', 'Times New Roman', serif;
             overflow-x: hidden;
             min-height: 100vh;
+            width: 100%;
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
         }
 
         /* Фоновые элементы - точки и звёздочки */
@@ -73,6 +78,8 @@
             letter-spacing: 8px;
             text-shadow: 0 4px 20px rgba(255, 255, 255, 0.5),
                          0 0 30px rgba(255, 200, 220, 0.8);
+            width: 100%;
+            margin: 0;
         }
 
         /* Контейнер конверта */
@@ -84,6 +91,8 @@
             align-items: center;
             min-height: 60vh;
             padding: 20px;
+            width: 100%;
+            margin: 0 auto;
         }
 
         .envelope-wrapper {
@@ -91,6 +100,10 @@
             cursor: pointer;
             transition: transform 0.3s ease;
             max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .envelope-wrapper:hover {
@@ -133,6 +146,8 @@
         /* Конверт SVG */
         .envelope-svg {
             filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+            display: block;
+            margin: 0 auto;
         }
 
         .envelope-flap {
@@ -334,6 +349,14 @@
             .letter {
                 padding: 35px 25px;
                 width: 95%;
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%) scale(0);
+                margin: 0;
+            }
+
+            .letter.show {
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .envelope-svg {
@@ -386,9 +409,18 @@
 
             .letter {
                 padding: 25px 20px;
-                width: 98%;
+                width: 96%;
+                max-width: 96vw;
                 max-height: 85vh;
                 border-radius: 20px;
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%) scale(0);
+                margin: 0;
+            }
+
+            .letter.show {
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .letter::before {
@@ -449,6 +481,15 @@
 
             .letter {
                 padding: 20px 15px;
+                width: 94%;
+                max-width: 94vw;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                margin: 0;
+            }
+
+            .letter.show {
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .letter h2 {
@@ -839,11 +880,8 @@
         
         <h2>С Днём Святого Валентина 💌</h2>
         <div class="letter-content" id="letterText">
-            В этот прекрасный день хочу сказать тебе самые тёплые слова!
-            Ты — мой источник радости и вдохновения, моя опора и счастье.
-            Пусть наша любовь будет крепкой, как утренний кофе, и сладкой, как шоколад! 
-            Спасибо, что ты есть в моей жизни. 
-            С любовью и нежностью в этот День всех влюблённых! ❤️
+            Поздравляю с Днём всех влюблённых!
+Пусть каждый день будет наполнен теплом, улыбками и приятными сюрпризами. Пусть любовь найдёт тебя в самый неожиданный и прекрасный момент.
         </div>
         <img class="letter-gif" id="letterGif" src="" alt="С любовью">
         <div class="letter-buttons">
@@ -853,7 +891,7 @@
 
     <script>
         // === КОНФИГУРАЦИЯ ===
-        const gifUrl = 'https://i.pinimg.com/originals/d8/17/fb/d817fb4583391600587c4e817460ed84.gif'; // Замените на нужный GIF
+        const gifUrl = 'https://gifs.obs.ru-moscow-1.hc.sbercloud.ru/c5fab91a7e33d3521980ad843dc0c3d57ee34e1c9a70d7573fa94139573d2b9a.webp'; // Замените на нужный GIF
 
         // === ЭЛЕМЕНТЫ ===
         const envelopeWrapper = document.getElementById('envelopeWrapper');
