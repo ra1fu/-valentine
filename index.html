@@ -162,19 +162,18 @@
         /* Письмо */
         .letter {
             position: fixed;
-            top: 0;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
             background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 50%, #ffd9e0 100%);
-            padding: 50px 50px;
-            padding-top: 60px;
-            border-radius: 0;
+            padding: 50px 50px 40px 50px;
+            border-radius: 25px;
             box-shadow: 0 25px 70px rgba(214, 52, 71, 0.3), 
                         0 10px 30px rgba(0, 0, 0, 0.2),
                         inset 0 1px 0 rgba(255, 255, 255, 0.8);
             max-width: 90%;
             width: 520px;
-            height: 100vh;
+            max-height: 90vh;
             overflow-y: auto;
             z-index: 100;
             opacity: 0;
@@ -191,7 +190,7 @@
             right: -3px;
             bottom: -3px;
             background: linear-gradient(135deg, #f5a9b8, #d63447, #f5a9b8);
-            border-radius: 0;
+            border-radius: 25px;
             z-index: -1;
         }
 
@@ -204,7 +203,7 @@
             bottom: 15px;
             background: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="1" cy="1" r="1" fill="%23f5a9b8" opacity="0.15"/></svg>');
             pointer-events: none;
-            border-radius: 0;
+            border-radius: 20px;
             z-index: 0;
         }
 
@@ -214,7 +213,7 @@
         }
 
         .letter.show {
-            transform: translateX(-50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
             opacity: 1;
         }
 
@@ -273,6 +272,7 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
+            margin-bottom: 0;
         }
 
         .btn {
@@ -347,16 +347,16 @@
             }
 
             .letter {
-                padding: 35px 25px;
+                padding: 35px 25px 30px 25px;
                 width: 95%;
                 left: 50%;
                 right: auto;
-                transform: translateX(-50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
                 margin: 0;
             }
 
             .letter.show {
-                transform: translateX(-50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .envelope-svg {
@@ -408,23 +408,23 @@
             }
 
             .letter {
-                padding: 40px 25px 35px 25px;
+                padding: 40px 25px 30px 25px;
                 width: 96%;
                 max-width: 96vw;
-                height: 100vh;
-                border-radius: 0;
+                max-height: 92vh;
+                border-radius: 20px;
                 left: 50%;
                 right: auto;
-                transform: translateX(-50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
                 margin: 0;
             }
 
             .letter.show {
-                transform: translateX(-50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .letter::before {
-                border-radius: 0;
+                border-radius: 20px;
             }
 
             .letter h2 {
@@ -480,16 +480,16 @@
             }
 
             .letter {
-                padding: 35px 15px 20px 15px;
+                padding: 35px 15px 25px 15px;
                 width: 94%;
                 max-width: 94vw;
                 left: 50%;
-                transform: translateX(-50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
                 margin: 0;
             }
 
             .letter.show {
-                transform: translateX(-50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
 
             .letter h2 {
@@ -515,7 +515,7 @@
             }
 
             .letter {
-                height: 100vh;
+                max-height: 95vh;
                 width: 85%;
             }
 
